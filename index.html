@@ -10,7 +10,8 @@
     <header class="main-header">
         <div class="main-header-top-menu">
             <a class="main-header-logo">ТЕХНОМАРТ</a>
-            <span class="main-header-seaech">Поиск:</span>
+             <label class="visually-hidden" for="search">Поиск по сайту</label> 
+            <input class="main-header-seaech" type="search" name="search" id="search" placeholder="Поиск:">
             <a class="main-header-bookmarks" href="bookmarks.html">Закладки:</a>
             <a class="main-header-basket" href="basket.html">Корзина:</a>
             <a class="main-header-make-order-btn" href="order.html">Оформить заказ</a>
@@ -75,6 +76,8 @@
                     <a class="main-slider-btn" href="catalog.html">Открыть каталог</a>
                 </li>
             </ul>
+            <button type="button" name="button-slider-back">Назад</button>
+            <button type="button" name="button-slider-next">Вперед</button>
         </div>
         <section class="popular-price">
             <div class="container">
@@ -249,6 +252,21 @@
         </div>
     </footer>
 
+    <section class=modal-feedback>
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <form class="feedback-form"  action="https://echo.htmlacademy.ru" method="post">
+            <p class="feedback-item">
+            <label for="user-name">Ваше имя:</label>
+            <input type="text" id="user-name" name="name" placeholder="Имя Фамилия">
+            </p>
+            <p>
+            <label for="user-email">Ваше имя:</label>
+            <input type="email" id="user-email" name="email" placeholder="email@example.com">
+            </p>
+        </form>
+        
+    </section >
+    
 </body>
 
 </html>
