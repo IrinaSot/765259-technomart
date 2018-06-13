@@ -65,9 +65,11 @@
 		                <span></span>  <!-- 1ый ползунок (абсолютное позизионирование от базовой линии -->
 		                <span></span>  <!-- 2ый ползунок (абсолютное позизионирование от базовой линии -->
 	                </div>
-                    <input type="text" name="price" pattern="[0-9]{5}" placeholder="Значение от 0 до 30000">
+                    <label class="visually-hidden" for="range-min">Цена от</label>
+                    <input type="text" name="price-min" pattern="[0-9]{5}" placeholder="0" id="range-min">                  
                     <span>-</span>
-                    <input type="text" name="price" pattern="[0-9]{5}" placeholder="Значение от 0 до 30000">
+                    <label class="visually-hidden" for="range-max">Цена до</label>
+                    <input type="text" name="price-max" pattern="[0-9]{5}" placeholder="30000" id="range-max">
                 </fieldset>
 
                 <fieldset>
