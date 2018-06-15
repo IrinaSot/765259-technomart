@@ -27,14 +27,6 @@ a {
     background-color: #293449;
 }
 
-.main-header-top-menu:hover {
-    background-color: #212a3a;
-}
-
-.main-header-top-menu:not(.main-header-seaech):focus {
-    background-color: #161d29;
-}
-
 .main-header-logo {
     font-size: 24px;
     line-height: 24px;
@@ -44,8 +36,17 @@ a {
     background-color: #ee3643;
 }
 
+.main-header-logo:hover{
+    background-color: #ca2c37;
+}
+.main-header-logo:focus{
+    background-color: #ba2732;
+}
+
 .main-header-seaech {
     background-color: #293449;
+    border:none;
+    color: #ffffff;
 }
 
 .main-header-seaech::-webkit-input-placeholder {
@@ -66,24 +67,62 @@ a {
     color: #ffffff;
 }
 
-.main-header-seaech::-ms-input-placeholder {
-    font-size: 17px;
-    line-height: 18px;
-    color: #ffffff;
-}
-
 .main-header-seaech::placeholder {
     font-size: 17px;
     line-height: 18px;
     color: #ffffff;
 }
 
-.main-header-make-order-btn {
+.main-header-seaech:hover {
+    color: #ffffff;
+    
+    background-color: #212a3a;   
+}
+.main-header-seaech:focus{
+    background-color:#ffffff;
+}
+.main-header-seaech:focus::-webkit-input-placeholder {
+    color: #000000;    
+}
+.main-header-seaech:focus::-moz-placeholder {
+    color: #000000;    
+}
+.main-header-seaech:focus::-ms-input-placeholder {
+    color: #000000;    
+}
+.main-header-seaech:focus::placeholder {
+    color: #000000;    
+}
+.main-header-bookmarks:hover,
+.main-header-basket:hover{  
+    background-color: #212a3a;
+}
+
+.main-header-bookmarks:focus,
+.main-header-basket:focus{
+    color: #ffffff;
+    opacity: 0.4;
+    
+    background-color: #161d29;
+}
+
+
+.main-header-order-btn {
     font-size: 17px;
     line-height: 18px;
     color: #ffffff;
 
     background-color: #63a63e;
+}
+
+.main-header-order-btn:hover{
+    background-color: #5fbb2d;
+} 
+
+.main-header-order-btn:focus{
+    color:#ffffff;
+    opacity: 0.5;
+    background-color: #518534;
 }
 
 .header-wrap {
@@ -115,6 +154,15 @@ a {
     color: #000000;
 }
 
+.user-navigation a:hover{
+    color: #ee3643;
+}
+
+.user-navigation a:focus{
+    color: #000000;
+    opacity: 0.3;
+}
+
 .main-navigation {
     font-size: 17px;
     line-height: 17px;
@@ -135,6 +183,16 @@ a {
 
 .site-navigation a {
     color: #ffffff;
+}
+
+.site-navigation a:hover{
+    background-color: #293449;
+} 
+
+.site-navigation a:focus{
+    color: #ffffff;
+    opacity: 0.5;
+    background-color: #1d2739;
 }
 
 .menu-item h3 {
@@ -175,6 +233,7 @@ a {
     background-color: #ffc047;
 }
 
+/* Эти цвета кнопок с главной страницы
 .menu-item:nth-of-type(1) .menu-item-btn:nth-child(2) {
     background-color: #e5ac40;
     opacity: 0.9;
@@ -198,8 +257,18 @@ a {
 .menu-item:last-of-type .menu-item-btn:nth-child(2) {
     background-color: #e5ac40;
     opacity: 0.9;
+}*/
+/* А это со styleguide*/
+.menu-item a{
+    background-color: #e5e5e5
 }
 
+.menu-item a:hover{
+    background-color: #cccccc;
+}
+.menu-item a:focus{
+    background-color:#b2b2b2;
+}
 
 .slider-item-caption {
     font-size: 36px;
@@ -217,6 +286,14 @@ a {
     color: #ffffff;
 
     background-color: #000000;
+}
+
+.main-slider-btn:hover{
+    background-color: #ca2c37;
+}
+
+.main-slider-btn:focus{
+   background-color:#ba2732;
 }
 
 .title-btn-wrap {
@@ -260,10 +337,37 @@ a {
     background-color: #63a63e;
 }
 
+.catalog-item-btn:first-child:hover {
+    background-color: #5fbb2d;
+}
+
+.catalog-item-btn:first-child:focus{
+    background-color:#518534;
+}
+
 .catalog-item-btn:last-child {
     color: #32425c;
 
     background-color: #ffffff;
+    border:2px solid #63a63e;
+}
+
+.catalog-item-btn:last-child:hover {
+    color: #32425c;
+
+    background-color: #ffffff;
+    border:2px solid #32425c;
+}
+.catalog-item-btn:last-child:focus {
+    color: #32425c;
+    opacity: 0.3;
+
+    background-color: #ffffff;
+    border:2px solid #c1c6ce;
+}
+
+.popular-items a:active{
+    opacity: 0.3;
 }
 
 .service {
@@ -301,6 +405,100 @@ a {
 .delivery-item {
     font-size: 18px;
     line-height: 20px;
+}
+
+.user-order-area{
+   list-style: none;
+}
+.user-order-area a{
+ color: #32425c;   
+}
+
+.breadcrumbs{
+   list-style: none;
+   font-family: PT Sans, Arial, sans-serif; 
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+.page-title{
+  font-size: 30px;
+    line-height: 30px;
+    color: #32425c; 
+    text-transform: uppercase;
+}
+.filters h2,
+.sort h2{
+     font-size: 13px;
+    line-height: 18px;
+    font-family: PT Sans, Arial, sans-serif;
+    text-transform: uppercase;
+    
+   background-color:#f7f3ec; 
+}
+
+.filters legend{
+   font-size: 17px;
+    line-height: 30px;
+    font-family: PT Sans, Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;   
+}
+
+
+.filters input{
+    background-color:#f7f3ec;  
+}
+
+.filters ul{
+    list-style: none;
+    font-size: 15px;
+    line-height: 20px;
+    font-family: PT Sans, Arial, sans-serif;
+    text-transform: uppercase; 
+}
+
+.filter-input:hover + label,
+.filter-input:focus + label {
+  color: #000000;
+}
+
+.filter-input:disabled + label {
+  color: #000000;
+
+  opacity: 0.4;
+}
+
+.filter-button{
+  font-size: 13px;
+    line-height: 18px;
+    font-family: PT Sans, Arial, sans-serif;
+    text-transform: uppercase;    
+    color: #000000;
+    
+    background-color: #ffffff; 
+}
+.sort{
+    background-color: #f7f3ec;
+}
+.sort ul{
+    list-style: none;
+    
+}
+.sort a{
+    font-size: 13px;
+    line-height: 18px;
+    font-family: PT Sans, Arial, sans-serif;
+    text-transform: uppercase; 
+    color:#000000;
+    
+    opacity: 0.3;
+}
+.sort a:hover{
+    opacity: 1;
+}
+.sort a:focus{
+    color:#ee3643;
 }
 
 .footer-top {
@@ -362,15 +560,43 @@ a {
 .footer-development-link {
     color: #ffd180;
 }
-.modal-feedback input::-webkit-input-placeholder{ 
+.feedback-item{
+    font-size: 18px;
+    line-height: 18px;
+    color: #000000;
+}
+.style-placeholder::-webkit-input-placeholder{ 
     font-size: 13px;
     line-height: 18px;
     color: #a9a9a9;
     font-family: PT Sans, Arial, sans-serif;
 }
-.modal-feedback input::-moz-placeholder{ 
+.style-placeholder::-moz-placeholder{ 
     font-size: 13px;
     line-height: 18px;
     color: #a9a9a9;
     font-family: PT Sans, Arial, sans-serif;
+}
+.style-placeholder::-ms-input-placeholder {
+  font-size: 13px;
+    line-height: 18px;
+    color: #a9a9a9;
+    font-family: PT Sans, Arial, sans-serif;  
+}
+.style-placeholder::placeholder {
+     font-size: 13px;
+    line-height: 18px;
+    color: #a9a9a9;
+    font-family: PT Sans, Arial, sans-serif;  
+}
+
+.modal-basket p{  
+    font-size: 30px;
+    line-height: 30px;
+    color: #000000;
+}
+.modal-button button:last-child{
+    color:#000000;
+    
+   background-color: #ffffff;
 }
