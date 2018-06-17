@@ -15,11 +15,25 @@ a {
     text-decoration: none;
 }
 
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .main-header-top-menu {
     background-color: #293449;
 }
 
-.main-header-top-menu a:not(:last-child):not(.main-header-logo) {
+.main-header-bookmarks,
+.main-header-basket{
     font-size: 17px;
     line-height: 18px;
     color: #ffffff;
@@ -45,9 +59,12 @@ a {
 }
 
 .main-header-seaech {
+    font-size: 17px;
+    line-height: 18px;
+    color: #000000;
+
     background-color: #293449;
     border: none;
-    color: #ffffff;
 }
 
 .main-header-seaech::-webkit-input-placeholder {
@@ -81,6 +98,8 @@ a {
 }
 
 .main-header-seaech:focus {
+    color: #000000;
+
     background-color: #ffffff;
 }
 
@@ -107,8 +126,8 @@ a {
 
 .main-header-bookmarks:focus,
 .main-header-basket:focus {
-    color: #ffffff;
-    opacity: 0.4;
+    color: rgba(255, 255, 255, 0.6);
+    
 
     background-color: #161d29;
 }
@@ -127,8 +146,7 @@ a {
 }
 
 .main-header-order-btn:focus {
-    color: #ffffff;
-    opacity: 0.5;
+    color: rgba(255, 255, 255, 0.5);
     background-color: #518534;
 }
 
@@ -214,70 +232,43 @@ a {
     color: #ffffff;
     text-transform: uppercase;
     text-align: center;
-    vertical-align: middle;
 
     background-color: #ee3643;
     border: none;
 }
 
-.menu-item:first-child {
+.menu-item-materials {
     background-color: #ffbf47;
 }
 
-.menu-item:nth-child(2) {
+.menu-item-tool {
     background-color: #3bbce3;
 }
 
-.menu-item:nth-child(3) {
+.menu-item-tech {
     background-color: #dc91d8;
 }
 
-.menu-item:nth-child(4) {
+.menu-item-discounts {
     background-color: #8ed78f;
 }
 
-.menu-item:nth-child(5) {
+.menu-item-delivery {
     background-color: #ffc047;
 }
 
-/* Эти цвета кнопок с главной страницы
-.menu-item:nth-of-type(1) .menu-item-btn:nth-child(2) {
-    background-color: #e5ac40;
-    opacity: 0.9;
-}
-
-.menu-item:nth-of-type(2) .menu-item-btn:nth-child(2) {
-    background-color: #35a9cc;
-    opacity: 0.9;
-}
-
-.menu-item:nth-of-type(3) .menu-item-btn:nth-child(2) {
-    background-color: #c682c2;
-    opacity: 0.9;
-}
-
-.menu-item:nth-of-type(4) .menu-item-btn:nth-child(2) {
-    background-color: #80c180;
-    opacity: 0.9;
-}
-
-.menu-item:last-of-type .menu-item-btn:nth-child(2) {
-    background-color: #e5ac40;
-    opacity: 0.9;
-}*/
-
-/* А это со styleguide*/
-
 .menu-item a {
-    background-color: #e5e5e5
+    background-color: rgba(0, 0, 0, 0.1);
+    
 }
 
 .menu-item a:hover {
-    background-color: #cccccc;
+    background-color: rgba(0, 0, 0, 0.2);
+    
 }
 
 .menu-item a:focus {
-    background-color: #b2b2b2;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .slider-item-caption {
@@ -298,11 +289,11 @@ a {
     background-color: #000000;
 }
 
-.main-slider-btn:hover {
+.btn-red:hover {
     background-color: #ca2c37;
 }
 
-.main-slider-btn:focus {
+.btn-red:focus {
     background-color: #ba2732;
 }
 
@@ -313,6 +304,7 @@ a {
 .section-title {
     font-size: 30px;
     line-height: 30px;
+    font-weight: normal;
     color: #32425c;
     text-transform: uppercase;
 }
@@ -320,7 +312,7 @@ a {
 .catalog-item h3 {
     font-size: 18px;
     line-height: 20px;
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-weight: bold;
     color: #000000;
 }
@@ -329,7 +321,7 @@ a {
 .price-btn {
     font-size: 17px;
     line-height: 18px;
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -338,38 +330,39 @@ a {
     text-decoration: line-through;
 }
 
-.catalog-item-btn {
+.catalog-btn a {
     font-size: 14px;
     line-height: 18px;
 }
 
-.catalog-item-btn:first-child {
+.catalog-btn-basket{
     background-color: #63a63e;
 }
 
-.catalog-item-btn:first-child:hover {
+.catalog-btn-basket:hover {
     background-color: #5fbb2d;
 }
 
-.catalog-item-btn:first-child:focus {
+.catalog-btn-basket:focus {
+    color: #ffffff;
     background-color: #518534;
 }
 
-.catalog-item-btn:last-child {
+.catalog-btn-bookmarks {
     color: #32425c;
 
     background-color: #ffffff;
     border: 2px solid #63a63e;
 }
 
-.catalog-item-btn:last-child:hover {
+.catalog-btn-bookmarks:hover {
     color: #32425c;
 
     background-color: #ffffff;
     border: 2px solid #32425c;
 }
 
-.catalog-item-btn:last-child:focus {
+.catalog-btn-bookmarks:focus {
     color: #32425c;
     opacity: 0.3;
 
@@ -377,7 +370,7 @@ a {
     border: 2px solid #c1c6ce;
 }
 
-.popular-items a:active {
+.popular-brands a:active {
     opacity: 0.3;
 }
 
@@ -392,11 +385,12 @@ a {
     line-height: 30px;
     color: #000000;
     text-transform: uppercase;
+    font-weight: normal;
 }
 
 
 .service p {
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
 }
 
 .service-item a {
@@ -431,6 +425,7 @@ a {
     font-size: 36px;
     line-height: 36px;
     color: #32425c;
+    font-weight: normal;
 }
 
 .delivery-item {
@@ -439,11 +434,18 @@ a {
 }
 
 .about p {
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
+}
+
+.contacts p {
+    font-family: "PT Sans", Arial, sans-serif;
 }
 
 .user-order-area {
     list-style: none;
+    text-decoration: underline;
+    font-size: 16px;
+    line-height: 18px;
 }
 
 .user-order-area a {
@@ -458,12 +460,36 @@ a {
     opacity: 0.3;
 }
 
+.user a,
+.exit a {
+    font-size: 21px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.exit a {
+    opacity: 0.3;
+}
+
+.user a:hover,
+.exit a:hover {
+    color: #000000;
+}
+
 .breadcrumbs {
     list-style: none;
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
+}
+
+.breadcrumbs a:link,
+.breadcrumbs a:visited,
+.breadcrumbs a:hover,
+.breadcrumbs a:focus,
+.breadcrumbs a:active {
+    color: #000000;
 }
 
 .page-title {
@@ -477,30 +503,72 @@ a {
 .sort h2 {
     font-size: 13px;
     line-height: 18px;
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     text-transform: uppercase;
+    font-weight: normal;
 
     background-color: #f7f3ec;
 }
 
-.filters legend {
+.filter legend {
     font-size: 17px;
     line-height: 30px;
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 
-.filters input {
+.filter input {
     background-color: #f7f3ec;
+    font-size: 17px;
+    line-height: 30px;
+    font-family: "PT Sans", Arial, sans-serif;
+    color: #000000;
+    font-weight:normal;
 }
 
-.filters ul {
+.price-placeholder::-webkit-input-placeholder {
+    background-color: #f7f3ec;
+    font-size: 17px;
+    line-height: 30px;
+    font-family: "PT Sans", Arial, sans-serif;
+    color: #000000;
+    font-weight:normal;
+}
+
+.price-placeholder::-moz-placeholder {
+    background-color: #f7f3ec;
+    font-size: 17px;
+    line-height: 30px;
+    font-family: "PT Sans", Arial, sans-serif;
+    color: #000000;
+    font-weight:normal;
+}
+
+.price-placeholder::-ms-input-placeholder {
+    background-color: #f7f3ec;
+    font-size: 17px;
+    line-height: 30px;
+    font-family: "PT Sans", Arial, sans-serif;
+    color: #000000;
+    font-weight:normal;
+}
+
+.price-placeholder::placeholder {
+    background-color: #f7f3ec;
+    font-size: 17px;
+    line-height: 30px;
+    font-family: "PT Sans", Arial, sans-serif;
+    color: #000000;
+    font-weight:normal;
+}
+
+.filter ul {
     list-style: none;
     font-size: 15px;
     line-height: 20px;
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     text-transform: uppercase;
 }
 
@@ -512,13 +580,13 @@ a {
 .filter-input:disabled + label {
     color: #000000;
 
-    opacity: 0.4;
+  opacity: 0.4;
 }
 
 .filter-button {
     font-size: 13px;
     line-height: 18px;
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     text-transform: uppercase;
     color: #000000;
 
@@ -537,19 +605,32 @@ a {
 .sort a {
     font-size: 13px;
     line-height: 18px;
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     text-transform: uppercase;
-    color: #000000;
+    color: rgba(0, 0, 0, 0.3);
 
-    opacity: 0.3;
+    
+    border-bottom:1px dotted #ee3643;
 }
 
 .sort a:hover {
-    opacity: 1;
+    color: rgba(0, 0, 0, 1);
+    
+    
+    border-bottom:1px solid #ee3643;
 }
 
 .sort a:focus {
     color: #ee3643;
+    border:none;
+}
+
+.sort a:active{
+   color: #ee3643; 
+}
+.sort-current a{
+   color: #ee3643; 
+    border:none;
 }
 
 .catalog-list {
@@ -563,7 +644,7 @@ a {
 .pagination-list a {
     font-size: 13px;
     line-height: 18px;
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     text-transform: uppercase;
     color: #000000;
 
@@ -579,16 +660,13 @@ a {
     border: 1px solid #ee3643;
 }
 
-.pagination-list a:active {
-    color: #ffffff;
 
-    background-color: #ee3643;
-}
 
 .pagination-item-current a {
     color: #ffffff;
 
     background-color: #ee3643;
+    border:none;
 }
 
 .pagination-item-current a:hover,
@@ -597,6 +675,7 @@ a {
     color: #ffffff;
 
     background-color: #ee3643;
+    border:none;
 }
 
 .footer-top {
@@ -695,28 +774,28 @@ a {
     font-size: 13px;
     line-height: 18px;
     color: #a9a9a9;
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
 }
 
 .style-placeholder::-moz-placeholder {
     font-size: 13px;
     line-height: 18px;
     color: #a9a9a9;
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
 }
 
 .style-placeholder::-ms-input-placeholder {
     font-size: 13px;
     line-height: 18px;
     color: #a9a9a9;
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
 }
 
 .style-placeholder::placeholder {
     font-size: 13px;
     line-height: 18px;
     color: #a9a9a9;
-    font-family: PT Sans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
 }
 
 .modal-basket p {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>ТЕХНОМАРТ-интернет-магазин строительных материалов и инструментов для ремонта</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i%7CPT+Sans" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -28,8 +28,8 @@
                 <p class="header-contact-info-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
             <ul class="user-navigation">
-                <li class="login-link"><a href="#">Равшан Джамшутович</a></li>
-                <li class="login-exit"><a href="#"> Выйти</a></li>
+                <li class="user"><a href="#">Равшан Джамшутович</a></li>
+                <li class="exit"><a href="#"> Выйти</a></li>
             </ul>
             <ul class="user-order-area">
                 <li class="orders"><a href="#">Мои заказы</a></li>
@@ -73,13 +73,13 @@
                         <!-- 2ый ползунок (абсолютное позизионирование от базовой линии -->
                     </div>
                     <label class="visually-hidden" for="range-min">Цена от</label>
-                    <input type="text" name="price-min" pattern="[0-9]{5}" placeholder="0" id="range-min">
+                    <input type="text" name="price-min" pattern="[0-9]{5}" placeholder="0" id="range-min" class="price-placeholder">
                     <span>-</span>
                     <label class="visually-hidden" for="range-max">Цена до</label>
-                    <input type="text" name="price-max" pattern="[0-9]{5}" placeholder="30000" id="range-max">
+                    <input type="text" name="price-max" pattern="[0-9]{5}" placeholder="30000" id="range-max" class="price-placeholder">
                 </fieldset>
 
-                <fieldset>
+                <fieldset >
                     <legend>Производители:</legend>
                     <ul>
                         <li class="filter-option">
@@ -126,7 +126,7 @@
         <section class="sort">
             <h2>Сортировка</h2>
             <ul>
-                <li><a href="#">По цене</a></li>
+                <li class="sort-current"><a href="#">По цене</a></li>
                 <li><a href="#">По типу</a></li>
                 <li><a href="#">По функционалу</a></li>
                 <li><a href="#"><span class="visually-hidden">Сортировка по возростанию</span></a></li>
@@ -147,8 +147,8 @@
                         </p>
                     </a>
                     <p class="catalog-btn">
-                        <a class="catalog-item-btn button" href="basket.html">Купить</a>
-                        <a class="catalog-item-btn button" href="bookmarks.html">В закладки</a>
+                       <a class="catalog-btn-basket button" href="basket.html">Купить</a>
+                            <a class="catalog-btn-bookmarks button" href="bookmarks.html">В закладки</a>
                     </p>
                     <span class="price-past">22500 Р.</span>
                     <p class="catalog-item-price">
@@ -169,8 +169,8 @@
                         </p>
                     </a>
                     <p class="catalog-btn">
-                        <a class="catalog-item-btn button" href="basket.html">Купить</a>
-                        <a class="catalog-item-btn button" href="bookmarks.html">В закладки</a>
+                        <a class="catalog-btn-basket button" href="basket.html">Купить</a>
+                            <a class="catalog-btn-bookmarks button" href="bookmarks.html">В закладки</a>
                     </p>
                     <span class="price-past">30500 Р.</span>
                     <p class="catalog-item-price">
@@ -191,8 +191,8 @@
                         </p>
                     </a>
                     <p class="catalog-btn">
-                        <a class="catalog-item-btn button" href="basket.html">Купить</a>
-                        <a class="catalog-item-btn button" href="bookmarks.html">В закладки</a>
+                        <a class="catalog-btn-basket button" href="basket.html">Купить</a>
+                            <a class="catalog-btn-bookmarks button" href="bookmarks.html">В закладки</a>
                     </p>
                     <p class="catalog-item-price">
                         <a class="price-btn button" href="catalog.html">12500 Р.</a>
@@ -211,8 +211,8 @@
                         </p>
                     </a>
                     <p class="catalog-btn">
-                        <a class="catalog-item-btn button" href="basket.html">Купить</a>
-                        <a class="catalog-item-btn button" href="bookmarks.html">В закладки</a>
+                        <a class="catalog-btn-basket button" href="basket.html">Купить</a>
+                            <a class="catalog-btn-bookmarks button" href="bookmarks.html">В закладки</a>
                     </p>
                     <span class="price-past">22500 Р.</span>
                     <p class="catalog-item-price">
@@ -232,8 +232,8 @@
                         </p>
                     </a>
                     <p class="catalog-btn">
-                        <a class="catalog-item-btn button" href="basket.html">Купить</a>
-                        <a class="catalog-item-btn button" href="bookmarks.html">В закладки</a>
+                        <a class="catalog-btn-basket button" href="basket.html">Купить</a>
+                            <a class="catalog-btn-bookmarks button" href="bookmarks.html">В закладки</a>
                     </p>
                     <span class="price-past">30500 Р.</span>
                     <p class="catalog-item-price">
@@ -252,9 +252,8 @@
                         </p>
                     </a>
                     <p class="catalog-btn">
-                        <a class="catalog-item-btn button" href="basket.html">Купить</a>
-                        <a class="catalog-item-btn button" href="bookmarks.html">В закладки</a>
-                    </p>
+                        <a class="catalog-btn-basket button" href="basket.html">Купить</a>
+                            <a class="catalog-btn-bookmarks button" href="bookmarks.html">В закладки</a>
                     <p class="catalog-item-price">
                         <a class="price-btn button" href="catalog.html">12500 Р.</a>
                     </p>
@@ -272,8 +271,8 @@
                         </p>
                     </a>
                     <p class="catalog-btn">
-                        <a class="catalog-item-btn button" href="basket.html">Купить</a>
-                        <a class="catalog-item-btn button" href="bookmarks.html">В закладки</a>
+                        <a class="catalog-btn-basket button" href="basket.html">Купить</a>
+                            <a class="catalog-btn-bookmarks button" href="bookmarks.html">В закладки</a>
                     </p>
                     <span class="price-past">22500 Р.</span>
                     <p class="catalog-item-price">
@@ -293,9 +292,8 @@
                         </p>
                     </a>
                     <p class="catalog-btn">
-                        <a class="catalog-item-btn button" href="basket.html">Купить</a>
-                        <a class="catalog-item-btn button" href="bookmarks.html">В закладки</a>
-                    </p>
+                       <a class="catalog-btn-basket button" href="basket.html">Купить</a>
+                            <a class="catalog-btn-bookmarks button" href="bookmarks.html">В закладки</a>
                     <span class="price-past">30500 Р.</span>
                     <p class="catalog-item-price">
                         <a class="price-btn button" href="catalog.html">25500 Р.</a>
@@ -313,8 +311,8 @@
                         </p>
                     </a>
                     <p class="catalog-btn">
-                        <a class="catalog-item-btn button" href="basket.html">Купить</a>
-                        <a class="catalog-item-btn button" href="bookmarks.html">В закладки</a>
+                       <a class="catalog-btn-basket button" href="basket.html">Купить</a>
+                            <a class="catalog-btn-bookmarks button" href="bookmarks.html">В закладки</a>
                     </p>
                     <p class="catalog-item-price">
                         <a class="price-btn button" href="catalog.html">12500 Р.</a>
