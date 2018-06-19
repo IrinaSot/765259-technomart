@@ -11,7 +11,9 @@
 
 <body>
     <header class="main-header">
+       
         <div class="main-header-top-menu">
+           <div class="container">
             <a class="main-header-logo">ТЕХНОМАРТ</a>
             <label class="visually-hidden" for="search">Поиск по сайту</label>
             <input class="main-header-seaech" type="search" name="search" id="search" placeholder="Поиск:">
@@ -19,7 +21,9 @@
             <a class="main-header-basket" href="basket.html">Корзина:</a>
             <a class="main-header-order-btn" href="order.html">Оформить заказ</a>
         </div>
+        </div>
         <div class="header-wrap">
+           <div class="container">
             <div class="header-info">
                 <h1 class="header-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
                 <div class="header-contact-info">
@@ -30,45 +34,50 @@
                     <li class="login-link"><a href="open.html">Войти</a></li>
                     <li class="login-registration"><a href="registration.html">Регистрация</a></li>
                 </ul>
-                </div>
-                <nav class="main-navigation">
-                    <ul class="site-navigation">
-                        <li><a>Главная</a></li>
-                        <li><a href="company.html">Компания</a></li>
-                        <li><a href="catalog.html">Каталог</a></li>
-                        <li><a href="news.html">Новости</a></li>
-                        <li><a href="special_offers.html">Спецпредложения</a></li>
-                        <li><a href="delivery.html">Доставка</a></li>
-                        <li><a href="contacts.html">Контакты</a></li>
-                    </ul>
-                </nav>
             </div>
-        
+            <nav class="main-navigation">
+                <ul class="site-navigation">
+                    <li><a>Главная</a></li>
+                    <li><a href="company.html">Компания</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="special_offers.html">Спецпредложения</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
     </header>
-    <main class="container">
+    <main class="main-container">
+       <div class="container">
         <div class="menu">
-            <div class="menu-wrap">
-            <div class="menu-item menu-item-materials">
-                <h3>Материалы</h3>
-                <a class="menu-item-btn button" href="catalog.html">На любой вкус</a>
-            </div>
-            <div class="menu-item menu-item-tool">
-                <h3>Инструмент</h3>
-                <a class="menu-item-btn button" href="catalog.html">На все случаи</a>
-            </div>
-            <div class="menu-item menu-item-tech">
-                <h3>Техника</h3>
-                <a class="menu-item-btn button" href="catalog.html">Для стройки</a>
-            </div>
-            <div class="menu-item menu-item-discounts">
-                <h3>Скидки 50%</h3>
-                <a class="menu-item-btn button" href="special_offers.html">На 350 товаров</a>
-            </div>
-            <div class="menu-item menu-item-delivery">
-                <h3>Доставка</h3>
-                <a class="menu-item-btn button" href="delivery.html">Бесплатно</a>
-            </div>
-            </div>
+                <div class="menu-wrap-top">
+                    <div class="menu-item menu-item-materials">
+                        <h3>Материалы</h3>
+                        <a class="menu-item-btn button" href="catalog.html">На любой вкус</a>
+                    </div>
+                    <div class="menu-item menu-item-tool">
+                        <h3>Инструмент</h3>
+                        <a class="menu-item-btn button" href="catalog.html">На все случаи</a>
+                    </div>
+                    <div class="menu-item menu-item-tech">
+                        <h3>Техника</h3>
+                        <a class="menu-item-btn button" href="catalog.html">Для стройки</a>
+                    </div>
+                </div>
+                <div class="menu-wrap-bottom">
+                <div class="menu-wrap-item">
+                <div class="menu-item menu-item-discounts">
+                    <h3>Скидки 50%</h3>
+                    <a class="menu-item-btn button" href="special_offers.html">На 350 товаров</a>
+                </div>
+                <div class="menu-item menu-item-delivery">
+                    <h3>Доставка</h3>
+                    <a class="menu-item-btn button" href="delivery.html">Бесплатно</a>
+                </div>
+                </div>
+           
             <ul class="main-slider">
                 <li class="main-slider-item">
                     <img src="img/perforator-slider.jpg" alt="Перфораторы">
@@ -84,8 +93,10 @@
                     <a class="main-slider-btn button btn-red" href="catalog.html">Открыть каталог</a>
                 </li>
             </ul>
+            <!--Кнопки на слайдере
             <button type="button" name="button-slider-back">Назад</button>
-            <button type="button" name="button-slider-next">Вперед</button>
+            <button type="button" name="button-slider-next">Вперед</button>-->
+            </div>
         </div>
         <section class="popular-price">
             <div class="container">
@@ -178,7 +189,7 @@
                 </ul>
                 <div class="title-btn-wrap">
                     <h2 class="section-title">Популярные производители</h2>
-                    <a class="popular-price-btn button btn-red" href="catalog.html">Все производители</a>
+                    <a class="popular-brands-btn button btn-red" href="catalog.html">Все производители</a>
                 </div>
                 <ul class="popular-brands">
                     <li class="brands-item">
@@ -206,8 +217,8 @@
                         <a href="catalog.html"><img src="img/metabo.png" alt="metabo"></a>
                     </li>
                 </ul>
-
             </div>
+            
         </section>
         <section class="service">
             <h2>Сервисы</h2>
