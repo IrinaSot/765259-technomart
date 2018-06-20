@@ -33,7 +33,7 @@ a {
 
 .main-header {
     margin-bottom: 60px;
-   
+
 }
 
 .main-header-top-menu {
@@ -72,7 +72,7 @@ a {
 
 
     background-color: #ee3643;
-   
+
 
 }
 
@@ -185,12 +185,13 @@ a {
 
 .header-wrap {
 
-    
+
     margin: 0;
     padding: 0;
     margin-bottom: 60px;
+    padding-bottom: 68px;
     background-color: #f3f7f8;
-   
+
 }
 
 .header-info {
@@ -200,7 +201,7 @@ a {
     margin: 0;
     padding: 0;
 
-   
+
 }
 
 .header-info h1 {
@@ -279,11 +280,10 @@ a {
     margin: 0;
     padding: 0;
     width: 100%;
-    min-height: 55px;
+
     font-size: 17px;
     line-height: 17px;
     color: #ffffff;
-
     background-color: #32425c;
 }
 
@@ -303,6 +303,7 @@ a {
     margin: 0;
     padding: 0;
     padding-top: 20px;
+
 }
 
 .site-navigation a {
@@ -488,7 +489,7 @@ a {
     margin-right: 20px;
 }
 
-.catalog-item:nth-child(3n) {
+.catalog-item:nth-child(4n) {
     margin-right: 0;
 }
 
@@ -574,6 +575,7 @@ a {
 .service {
     background-color: #f4f8f9;
     margin-bottom: 85px;
+
 }
 
 .service h2,
@@ -611,7 +613,7 @@ a {
     margin-right: 70px;
 }
 .service-item a {
-   
+
     font-size: 21px;
     line-height: 30px;
     color: #ffffff;
@@ -655,7 +657,7 @@ a {
 .about-wrap{
     display: flex;
 }
-.about{
+.about-company{
     width: 535px;
     margin-right: 90px;
 }
@@ -678,6 +680,8 @@ a {
 }
 
 .user-order-area {
+  margin: 0;
+  padding: 0;
     list-style: none;
     text-decoration: underline;
     font-size: 16px;
@@ -713,6 +717,9 @@ a {
 }
 
 .breadcrumbs {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
     list-style: none;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
@@ -729,10 +736,24 @@ a {
 }
 
 .page-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
     font-size: 30px;
     line-height: 30px;
     color: #32425c;
     text-transform: uppercase;
+font-weight: normal;
+
+    background-color: #f2f6f8;
+}
+.catalog-columns{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+.filters{
+  width: 220px;
 }
 
 .filters h2,
@@ -745,7 +766,9 @@ a {
 
     background-color: #f7f3ec;
 }
-
+.filters fieldset{
+  border:none;
+}
 .filter legend {
     font-size: 17px;
     line-height: 30px;
@@ -869,12 +892,27 @@ a {
     color: #ee3643;
     border: none;
 }
-
-.catalog-list {
-    list-style: none;
+.catalog{
+  width: 700px;
 }
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 55px;
+  padding: 0;
+  list-style: none;
+}
+.inner-page .catalog-item{
+  margin-bottom: 20px;
+}
+.inner-page .catalog-item:nth-child(3n){
+  margin-right: 0;
 
+}
 .pagination-list {
+  margin: 0;
+  padding: 0;
     list-style: none;
 }
 
@@ -914,7 +952,13 @@ a {
     background-color: #ee3643;
     border: none;
 }
-
+.about-perforator{
+  background-color: #f2f6f8;
+}
+.about-perforator h2{
+  margin: 0;
+  padding: 0;
+}
 .footer-top {
     background-color: #32425c;
      margin-top: 85px;
@@ -946,7 +990,7 @@ a {
 }
 .footer-contact-wrap{
     display: flex;
-    margin-bottom: 50px;
+   padding-bottom: 50px;
 }
 .footer-contact-info{
     width: 330px;
