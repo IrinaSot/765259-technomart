@@ -17,19 +17,28 @@ body {
 a {
     text-decoration: none;
 }
-
-.visually-hidden {
-    position: absolute;
-
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+.img {
+  max-width: 100%;
+  height: auto;
 }
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 
 .main-header {
     margin-bottom: 60px;
@@ -38,7 +47,7 @@ a {
 
 .main-header-top-menu {
     display: flex;
-    align-items: flex-start;
+    /*align-items: flex-start;*/
     margin: 0;
     padding: 0;
 
@@ -284,7 +293,7 @@ a {
     font-size: 17px;
     line-height: 17px;
     color: #ffffff;
-    background-color: #32425c;
+
 }
 
 .user-navigation,
@@ -299,15 +308,21 @@ a {
 
 .site-navigation {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    width: 940px;
     margin: 0;
     padding: 0;
-    padding-top: 20px;
 
+
+background-color: #32425c;
 }
 
 .site-navigation a {
+  display: block;
+  vertical-align: middle;
     color: #ffffff;
+    padding: 20px 32px;
 }
 
 .site-navigation a:hover {
