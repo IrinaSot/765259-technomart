@@ -50,7 +50,7 @@ a {
 .main-header-top-menu a,
 .main-header-top-menu input {
   display:block ;
-  vertical-align: middle;
+ /* vertical-align: middle;*/
 }
 
 .main-header-bookmarks,
@@ -65,8 +65,8 @@ a {
 
 .main-header-logo {
   width: 110px;
-  height: 24px;
-  padding: 10px 55px;
+ /*height: 24px;*/
+  padding: 10px 55px 8px;
   font-size: 24px;
   line-height: 24px;
   color: #ffffff;
@@ -84,6 +84,7 @@ a {
 }
 
 .main-header-seaech {
+    position: relative;
   width: 270px;
   padding: 11px 140px 13px 48px;
   font-size: 17px;
@@ -94,7 +95,20 @@ a {
   border: none;
   outline: 0;
 }
-
+.main-header-seaech::before{
+    content: ""; 
+    position: absolute;
+    top: 13px;
+    left:17px;
+    
+    width: 14px;
+    height: 16px;
+    background-color: red;
+    background-image: url(../img/icon-search.svg); 
+        background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
 .main-header-seaech::-webkit-input-placeholder {
   font-size: 17px;
   line-height: 18px;
@@ -147,15 +161,46 @@ a {
 }
 
 .main-header-bookmarks {
+    position: relative;
   width: 78px;
   padding-left: 44px;
   padding-right: 28px;
 }
+.main-header-bookmarks::before{
+ content: ""; 
+    position: absolute;
+    top: 12px;
+    left:17px;
+    
+    width: 14px;
+    height: 16px;
+    
+    background-image: url(../img/icon-bookmark.svg); 
+        background-repeat: no-repeat;
+    background-position: 0 0;
+    fill:#6a7180;
+    opacity: 0.3;
+}
 
 .main-header-basket {
+    position: relative;
   width: 70px;
   padding-left: 49px;
-  padding-right: 31px;
+  padding-right: 30px;
+}
+.main-header-basket::before{
+ content: ""; 
+    position: absolute;
+    top: 13px;
+    left:17px;
+    
+    width: 14px;
+    height: 16px;
+    
+    background-image: url(../img/cart-icon.svg); 
+        background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
 }
 
 .main-header-bookmarks:hover, .main-header-basket:hover {
