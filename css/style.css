@@ -879,7 +879,8 @@ z-index:10;
   display:block;
 }
 .catalog-item:hover{
-box-shadow: 0 10px 0 0 #293449;
+box-shadow: 0 25px 3px 10px rgba(41, 52, 73, 0.5)
+
 }
 .catalog-btn-basket:hover {
     background-color: #5fbb2d;
@@ -920,7 +921,7 @@ box-shadow: 0 10px 0 0 #293449;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    margin-bottom: 90px;
+    margin-bottom: 85px;
     list-style: none;
 }
 
@@ -948,6 +949,7 @@ box-shadow: 0 10px 0 0 #293449;
 .service {
     background-color: #f4f8f9;
     margin-bottom: 85px;
+    padding-top: 68px;
 }
 
 .service h2,
@@ -960,11 +962,14 @@ box-shadow: 0 10px 0 0 #293449;
     font-weight: normal;
     margin: 0;
     padding: 0;
+    margin-bottom: 26px;
 }
 
 .service p {
-    font-family: "PT Sans", Arial, sans-serif;
-    margin-bottom: 60px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  margin-bottom: 67px;
 }
 
 .service-wrap {
@@ -976,19 +981,29 @@ box-shadow: 0 10px 0 0 #293449;
 .service-list {
     margin: 0;
     padding: 0;
+    margin-right: 80px;
 }
 
 .service-item {
     width: 240px;
-    margin-right: 70px;
-}
 
+
+}
+.service-item li{
+
+}
 .service-item a {
+  display: block;
+  padding-left: 22px;
+  padding-top: 15px;
+  padding-bottom: 16px;
+
     font-size: 21px;
     line-height: 30px;
     color: #ffffff;
     font-weight: bold;
     background-color: #32425c;
+    box-shadow: inset 0 -1px 0 0 #405069;
 }
 
 .service-item a:hover {
@@ -1018,13 +1033,54 @@ box-shadow: 0 10px 0 0 #293449;
 }
 
 .service-slider-item strong {
+  display: block;
+  margin-bottom: 26px;
     font-size: 36px;
     line-height: 36px;
     color: #32425c;
     font-weight: normal;
+    text-transform: uppercase;
+}
+.service-slider-item p{
+  padding: 0;
+  margin: 0;
+}
+.service-slider-delivery{
+  display: none;
+position: relative;
+width: 285px;
+padding-right: 335px;
+}
+.service-slider-delivery::after{
+  content: "";
+  position: absolute;
+  top:25px;
+  right:  0;
+  width: 468px;
+  height:261px;
+
+  background-image: url(../img/delivery-slider.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.service-slider-guarantee,
+.service-slider-guarantee{
+  position: relative;
+  width: 381px;
+  padding-right: 239px;
+}
+.service-slider-guarantee::after{
+  content: "";
+  position: absolute;
+  top:3px;
+  right:  -7px;
+  width: 389px;
+  height:283px;
+
+  background-image: url(../img/guarantee-slider.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
 .service-slider-credit {
     display: none;
 }
