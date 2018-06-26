@@ -728,10 +728,12 @@ input[type="radio"].visually-hidden {
 }
 .btn-red:hover {
     background-color: #ca2c37;
+    box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
 .btn-red:focus {
     background-color: #ba2732;
+    box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
 .title-btn-wrap {
@@ -867,7 +869,7 @@ z-index:10;
   width:129px;
   margin:0 auto;
   margin-bottom:7px;
-  padding:7px 0;
+  padding:10px 0;
 
   font-size: 14px;
   line-height: 18px;
@@ -881,16 +883,21 @@ z-index:10;
   display:block;
 }
 .catalog-item:hover{
-box-shadow: 0 25px 3px 10px rgba(41, 52, 73, 0.5)
+box-shadow: 0 10px 25px  #aeb2ba;
 
 }
 .catalog-btn-basket:hover {
     background-color: #5fbb2d;
+    border: 3px solid #5fbb2d;
+    border-bottom: 3px solid #367315;
+    
+    
 }
 
 .catalog-btn-basket:focus {
     color: #ffffff;
     background-color: #518534;
+    border: 3px solid #518534
 }
 
 .catalog-btn-bookmarks {
@@ -902,14 +909,14 @@ box-shadow: 0 25px 3px 10px rgba(41, 52, 73, 0.5)
 .catalog-btn-bookmarks:hover {
     color: #32425c;
     background-color: #ffffff;
-    border: 2px solid #32425c;
+    border: 3px solid #32425c;
 }
 
 .catalog-btn-bookmarks:focus {
-    color: #32425c;
-    opacity: 0.3;
+    color:rgba(50, 66, 92, 0.3);
+   
     background-color: #ffffff;
-    border: 2px solid #c1c6ce;
+    border: 3px solid rgba(50, 66, 92, 0.3);
 }
 
 /*.popular-brands-btn {
@@ -926,7 +933,11 @@ box-shadow: 0 25px 3px 10px rgba(41, 52, 73, 0.5)
     margin-bottom: 65px;
     list-style: none;
 }
+.popular-brands a{
+  display:block;
+ margin: auto;
 
+}
 .brands-item {
   display: flex;
     width: 218px;
@@ -939,23 +950,24 @@ box-shadow: 0 25px 3px 10px rgba(41, 52, 73, 0.5)
 .brands-item:nth-child(4n){
   margin-right: 0;
 }
-.popular-brands a{
-  display:block;
-  margin: auto;
 
+.brands-item:hover{
+    box-shadow: 0 10px 25px  rgba(41, 52, 73, 0.5);
 }
-.popular-brands a:active {
+.brands-item a:focus{
     opacity: 0.3;
+   
 }
 
 .service {
     background-color: #f4f8f9;
-    margin-bottom: 85px;
+    margin-bottom: 79px;
     padding-top: 65px;
+    padding-bottom: 102px;
 }
 
 .service h2,
-.about h2,
+.about-company h2,
 .contacts h2 {
     font-size: 30px;
     line-height: 30px;
@@ -977,7 +989,7 @@ box-shadow: 0 25px 3px 10px rgba(41, 52, 73, 0.5)
 .service-wrap {
     display: flex;
     margin: 0;
-    margin-bottom: 100px;
+    
 }
 
 .service-list {
@@ -1049,7 +1061,7 @@ box-shadow: 0 25px 3px 10px rgba(41, 52, 73, 0.5)
   margin: 0;
 }
 .service-slider-delivery{
-  display: none;
+  display: block;
 position: relative;
 width: 285px;
 padding-right: 335px;
@@ -1069,7 +1081,7 @@ padding-right: 335px;
 
 .service-slider-guarantee{
   display: none;
-  position: relative;
+  position: buttonrelative;
   width: 381px;
   padding-right: 239px;
 }
@@ -1086,7 +1098,7 @@ padding-right: 335px;
   background-position: 0 0;
 }
 .service-slider-credit {
-    display: blok;
+    display: none;
     position: relative;
     width: 285px;
     padding-right: 335px;
@@ -1121,9 +1133,15 @@ padding-right: 335px;
 }
 
 .about-company {
+    
     width: 535px;
     margin-right: 90px;
 }
+/*.about-company h2{
+    display: block;
+    margin: 0;
+    padding: 0;
+}*/
 
 .delivery-list {
     width: 300px;
@@ -1136,14 +1154,29 @@ padding-right: 335px;
     line-height: 20px;
 }
 
-.about p {
+.about-company p {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 22px;
     font-family: "PT Sans", Arial, sans-serif;
 }
-
+/*.men-shopping{
+    margin-bottom: 25px; 
+}*/
+.contacts{
+    margin-left: auto;
+}
 .contacts p {
+    margin: 0;
+    padding: 0;
     font-family: "PT Sans", Arial, sans-serif;
 }
-
+.contacts a{
+    display: block;
+    margin: 0;
+    padding: 0;
+}
 .user-order-area {
     margin: 0;
     padding: 0;
