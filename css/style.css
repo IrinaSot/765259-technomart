@@ -494,6 +494,10 @@ input[type="radio"].visually-hidden {
     display: flex;
 }
 
+.slider{
+  position: relative;
+  text-align: center;
+}
 .main-slider {
     width: 620px;
     height: 266px;
@@ -548,7 +552,27 @@ input[type="radio"].visually-hidden {
 .button-slider-back {
     position: absolute;
 }
+.slider-controls{
+  position:absolute;
+  bottom: 22px;
+left: 294px;
+z-index: 20;
 
+font-size: 0;
+}
+.slider-controls label {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 10px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
 .menu-item {
     width: 278px;
     padding-top: 20px;
@@ -890,8 +914,8 @@ box-shadow: 0 10px 25px  #aeb2ba;
     background-color: #5fbb2d;
     border: 3px solid #5fbb2d;
     border-bottom: 3px solid #367315;
-    
-    
+
+
 }
 
 .catalog-btn-basket:focus {
@@ -914,7 +938,7 @@ box-shadow: 0 10px 25px  #aeb2ba;
 
 .catalog-btn-bookmarks:focus {
     color:rgba(50, 66, 92, 0.3);
-   
+
     background-color: #ffffff;
     border: 3px solid rgba(50, 66, 92, 0.3);
 }
@@ -934,12 +958,13 @@ box-shadow: 0 10px 25px  #aeb2ba;
     list-style: none;
 }
 .popular-brands a{
-  display:block;
- margin: auto;
+  display:flex;
 
 }
+
 .brands-item {
   display: flex;
+  justify-content: center;
     width: 218px;
     height: 143px;
     margin-right: 20px;
@@ -950,13 +975,18 @@ box-shadow: 0 10px 25px  #aeb2ba;
 .brands-item:nth-child(4n){
   margin-right: 0;
 }
-
+.brands-item img{
+  margin: auto;
+}
 .brands-item:hover{
     box-shadow: 0 10px 25px  rgba(41, 52, 73, 0.5);
 }
-.brands-item a:focus{
+.brands-item:active{
+  box-shadow: 0 4px 10px  rgba(41, 52, 73, 0.5);
+}
+.brands-item a:focus {
     opacity: 0.3;
-   
+
 }
 
 .service {
@@ -989,7 +1019,7 @@ box-shadow: 0 10px 25px  #aeb2ba;
 .service-wrap {
     display: flex;
     margin: 0;
-    
+
 }
 
 .service-list {
@@ -1133,49 +1163,77 @@ padding-right: 335px;
 }
 
 .about-company {
-    
+
     width: 535px;
     margin-right: 90px;
 }
-/*.about-company h2{
+.about-company p {
     display: block;
-    margin: 0;
-    padding: 0;
-}*/
-
+    font-family: "PT Sans", Arial, sans-serif;
+}
+.men-shopping{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 24px;
+}
+.delivery-ru{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 21px;
+}
 .delivery-list {
     width: 300px;
     margin: 0;
     padding: 0;
+margin-bottom: 36px;
 }
 
 .delivery-item {
+  position: relative;
     font-size: 18px;
     line-height: 20px;
+    margin-left: 36px;
+    margin-bottom: 20px;
 }
+.delivery-item::before{
+  content: "";
+  position: absolute;
+  top:9px;
+  left: -36px;
+  width: 26px;
+  height:2px;
 
-.about-company p {
-    display: block;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 22px;
-    font-family: "PT Sans", Arial, sans-serif;
+  border-top: 2px solid #ee3643;
 }
-/*.men-shopping{
-    margin-bottom: 25px; 
-}*/
+.about-company-btn{
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-top:10px;
+  padding-bottom: 10px;
+  width: 220px;
+}
 .contacts{
     margin-left: auto;
 }
 .contacts p {
     margin: 0;
     padding: 0;
+    margin-bottom: 31px;
     font-family: "PT Sans", Arial, sans-serif;
 }
 .contacts a{
     display: block;
-    margin: 0;
-    padding: 0;
+    }
+.contacts-map{
+  width: 300px;
+  height: 158px;
+  margin-bottom: 40px;
+}
+.contacts-btn{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 300px;
 }
 .user-order-area {
     margin: 0;
@@ -1452,38 +1510,46 @@ padding-right: 335px;
     margin: 0;
     padding: 0;
 }
-
+.main-footer{
+  margin-top: 86px;
+}
 .footer-top {
     background-color: #32425c;
-    margin-top: 85px;
 }
 
 .navigation-footer {
     display: flex;
-    margin-bottom: 35px;
+    margin-bottom: 27px;
 }
 
 .footer-logo {
+  display: block;
     margin-right: auto;
-    width: 137px;
-    padding: 18px 40px;
+    width: 220px;
+    padding-top: 18px;
+    padding-bottom: 20px;
     font-size: 30px;
     line-height: 30px;
     color: #ffffff;
+    text-align: center;
     text-transform: uppercase;
     background-color: #ee3643;
+    box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
 .footer-site-navigation {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    /*align-items: flex-end;*/
     width: 550px;
     margin: 0;
     padding: 0;
+    margin-top: 37px;
     margin-left: auto;
 }
-
+.footer-site-navigation a{
+  display: block;
+}
 .footer-contact-wrap {
     display: flex;
     padding-bottom: 50px;
@@ -1541,6 +1607,8 @@ padding-right: 335px;
     line-height: 28px;
     color: #ffffff;
     background-color: #293449;
+    padding-top: 35px;
+    padding-bottom: 30px;
 }
 
 .footer-bottom-wrap {
@@ -1549,28 +1617,64 @@ padding-right: 335px;
 
 .footer-copyright {
     width: 230px;
+    margin: 0;
+    margin-right: 160px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 18px;
 }
 
 .footer-social {
+  display: flex;
+  width: 132px;
+  flex-wrap: wrap;
+  justify-content: space-between;
     margin: 0;
+    margin-right: 119px;
     padding: 0;
     list-style: none;
     text-align: center;
 }
 
-.footer-social a {
+.social-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+width: 42px;
+height: 42px;
+
     color: #ffffff;
     background-color: #212a3a;
+    border-radius: 50%;
 }
 
 .footer-social a:hover,
 .footer-social a:focus {
     background-color: #ee3643;
 }
+.footer-contacts{
+  margin-right: 51px;
+  font-size: 16px;
+  line-height: 18px;
+}
+.footer-development{
+  font-size: 16px;
+  line-height: 18px;
+}
+.footer-contacts p,
+.footer-development p{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 18px;
+}
 
 .footer-contacts-link,
 .footer-development-link {
-    color: #ffd180;
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: #ffd180;
 }
 
 .footer-contacts-link:hover,
@@ -1618,7 +1722,11 @@ padding-right: 335px;
 }
 
 .modal-feedback {
-    display: none;
+  display: none;
+    position: fixed;
+    width: 620px;
+top: 120px;
+left:50%;
 }
 
 .modal-map {

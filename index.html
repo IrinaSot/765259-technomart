@@ -70,15 +70,22 @@
                     </div>
                 </div>
                 <div class="menu-wrap-bottom">
+                  <section class="slider">
+                    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+                    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+                  <div class="slider-controls">
+           <label for="product-1">Первый</label>
+           <label for="product-2">Второй</label>
+                  </div>
                     <ul class="main-slider">
-                        <li class="main-slider-item main-slider-perforator">
+                        <li class="main-slider-item main-slider-perforator" id="slide1">
                             <img width="620" height="266" src="img/perforator-slider.jpg" alt="Перфораторы">
                             <p class="slider-item-caption">Перфораторы</p>
                             <p class="slider-item-text">Настоящие мужские игрушки</p>
                             <a class="main-slider-btn button btn-red" href="catalog.html">Открыть каталог</a>
                         </li>
 
-                        <li class="main-slider-item main-slider-drill">
+                        <li class="main-slider-item main-slider-drill" id="slide2">
                             <img width="620" height="266" src="img/dril-slider.jpg" alt="Дрели">
                             <p class="slider-item-caption">Дрели</p>
                             <p class="slider-item-text">Соседям на радость!</p>
@@ -88,6 +95,7 @@
 
            <!-- <button type="button" name="button-slider-back">Назад</button>
             <button type="button" name="button-slider-next">Вперед</button>-->
+          </section>
                     <div class="menu-wrap-item">
                         <div class="menu-item menu-item-discounts">
                             <h3>Скидки 50%</h3>
@@ -253,9 +261,9 @@
         </section>
         <div class="container about-wrap">
             <section class="about-company about">
-                <h2>Компания «ТЕХНОМАРТ»</h2>    
+                <h2>Компания «ТЕХНОМАРТ»</h2>
                 <p class="men-shopping">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-                <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями: .</p>
+                <p class="delivery-ru">Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями: .</p>
                 <ul class="delivery-list">
                     <li class="delivery-item">Деловые линии</li>
                     <li class="delivery-item">Автотрейдинг</li>
@@ -268,7 +276,7 @@
             <section class="contacts">
                 <h2>Контакты</h2>
                 <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-                <a class="contacts-map" href="map.html"><img src="img/map-mini.png" alt="Карта проезда"><span class="visually-hidden">Как добраться?</span></a>
+                <a class="contacts-map" href="map.html"><img width="300" height="158" src="img/map-mini.png" alt="Карта проезда"><span class="visually-hidden">Как добраться?</span></a>
                 <a class="contacts-btn button btn-red" href="contacts-form.html">Заблудились? Напишите нам!</a>
             </section>
         </div>
@@ -302,19 +310,20 @@
         </div>
         <div class="footer-bottom">
             <div class="container footer-bottom-wrap">
-                <p class="footer-copyright">© 2010-2017 Компания «Техномарт»<br> Все права защищены</p>
+                <p class="footer-copyright">© 2010-2017 Компания «Техномарт»<br>
+                  Все права защищены</p>
 
                 <ul class="footer-social">
-                    <li><a class="social-btn-vk" href="https://vk.com"><span class="visually-hidden">Вконтакте</span></a></li>
-                    <li><a class="social-btn-fb" href="https://facebook.com"><span class="visually-hidden">Фейсбук</span></a></li>
-                    <li><a class="social-btn-in" href="https://instagram.com"><span class="visually-hidden">Инстаграм</span></a></li>
+                    <li><a class="social-btn-vk social-btn" href="https://vk.com"><span class="visually-hidden">Вконтакте</span><img width="26" height="15" src="img/vk-icon.svg"alt="Вконтакте"></a></li>
+                    <li><a class="social-btn-fb social-btn" href="https://facebook.com"><span class="visually-hidden">Фейсбук</span><img width="12" height="22" src="img/fb-icon.svg"alt="Фэйсбук"></a></li>
+                    <li><a class="social-btn-in social-btn" href="https://instagram.com"><span class="visually-hidden">Инстаграм</span><img width="21" height="21" src="img/insta-icon.svg"alt="Инстаграм"></a></li>
                 </ul>
                 <div class="footer-contacts">
                     <p>Обратная связь:</p>
                     <a class="footer-contacts-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
                 </div>
                 <div class="footer-development">
-                    <p>Разработано-</p>
+                    <p>Разработано -</p>
                     <a class="footer-development-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
                 </div>
             </div>
