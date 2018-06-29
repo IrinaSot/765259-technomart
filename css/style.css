@@ -264,7 +264,18 @@ input[type="radio"].visually-hidden {
 .main-header-basket:active::before {
     opacity: 0.5;
 }
+.inner-page .main-header-basket{
+  background-color: #ee3643;
+}
+.inner-page .main-header-basket::after{
+  content: "10";
+  position: absolute;
+  top: 12px;
+  left: 110px;
 
+  width: 15px;
+  height: 17px;
+}
 .main-header-order-btn {
     width: 110px;
     padding: 12px 20px 12px 20px;
@@ -315,14 +326,14 @@ input[type="radio"].visually-hidden {
     font-weight: normal;
     color: #ee3643;
 }
-.inner-page .header-title{
-    margin-right: 
-}
+
 .header-contact-info {
     width: 270px;
-    /*margin-right: 69px;*/
+    margin-right: 69px;
 }
-
+.inner-page .header-contact-info{
+  margin-right: 51px;
+}
 .header-contact-info-phone {
     position: relative;
     margin: 0;
@@ -1341,23 +1352,45 @@ popular-price .catalog-item:nth-child(4n) {
 .user-order-area a:focus {
     color: rgba(50, 66, 92, 0.3);
 }
+.inner-page .user-navigation{
+  width: 299px;
+}
+
 
 .user a {
     position: relative;
-    
      width: 186px;
     padding: 12px 65px 12px 46px;
-    
+
     font-size: 21px;
     line-height: 21px;
     color: #000000;
 }
 
+.user a::before{
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 13px;
 
+  width: 20px;
+  height: 18px;
 
+  background-image: url(../img/icon-user.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.user a:hover::before{
+  background-image: url(../img/icon-user-blue.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
 .user a:hover{
     color: #000000;
 }
+/*.user a:focus{
+  color: rgba(0, 0, 0, 0.3);
+}*/
 
 .breadcrumbs {
     margin: 0;
