@@ -15,9 +15,9 @@
             <div class="container">
                 <a class="main-header-logo" href="index.html">ТЕХНОМАРТ</a>
                 <form class="header-form" action="https://echo.htmlacademy.ru" method="post">
-                <label class="visually-hidden" for="search">Поиск по сайту</label>
-                <input class="main-header-seaech" type="search" name="search" id="search" placeholder="Поиск:">
-                  </form>
+                    <label class="visually-hidden" for="search">Поиск по сайту</label>
+                    <input class="main-header-seaech" type="search" name="search" id="search" placeholder="Поиск:">
+                </form>
                 <a class="main-header-bookmarks" href="bookmarks.html">Закладки:</a>
                 <a class="main-header-basket" href="basket.html">Корзина:</a>
                 <a class="main-header-order-btn" href="order.html">Оформить заказ</a>
@@ -25,73 +25,76 @@
             </div>
         </div>
         <div class="header-wrap">
-          <div class="container">
-                    <div class="header-info">
-                        <h1 class="header-title">Интернет-магазин строительных материалов<br> и инструментов для ремонта</h1>
-                        <div class="header-contact-info">
-                            <p class="header-contact-info-phone">+7 (812) 555-05-55</p>
-                            <p class="header-contact-info-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-                        </div>
-                        <div class="user-navigation-wrap">
-                            <ul class="user-navigation">
-                                <li class="user"><a href="#">Равшан Джамшутович</a></li>
-                                
-                            </ul>
-                            <ul class="user-order-area">
-                                <li class="orders"><a href="#">Мои заказы</a></li>
-                                <li><span class="dot"><!--Точка--></span></li>
-                                <li class="personal-area"> <a href="#">Личный кабинет</a></li>
-                            </ul>
-                        </div>
+            <div class="container">
+                <div class="header-info">
+                    <h1 class="header-title">Интернет-магазин строительных материалов<br> и инструментов для ремонта</h1>
+                    <div class="header-contact-info">
+                        <p class="header-contact-info-phone">+7 (812) 555-05-55</p>
+                        <p class="header-contact-info-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
                     </div>
-                    <nav class="main-navigation">
-                        <ul class="site-navigation">
-                            <li><a href="index.html">Главная</a></li>
-                            <li><a href="company.html">Компания</a></li>
-                            <li><a>Каталог</a></li>
-                            <li><a href="news.html">Новости</a></li>
-                            <li><a href="special_offers.html">Спецпредложения</a></li>
-                            <li><a href="delivery.html">Доставка</a></li>
-                            <li><a href="contacts.html">Контакты</a></li>
+                    <div class="user-navigation-wrap">
+                        <ul class="user-navigation">
+                            <li class="user"><a href="#">Равшан Джамшутович</a></li>
+
                         </ul>
-                    </nav>
+                        <ul class="user-order-area">
+                            <li class="orders"><a href="#">Мои заказы</a></li>
+
+                            <li class="personal-area"> <a href="#">Личный кабинет</a></li>
+                        </ul>
+                    </div>
                 </div>
+                <nav class="main-navigation">
+                    <ul class="site-navigation">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="company.html">Компания</a></li>
+                        <li><a>Каталог</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="special_offers.html">Спецпредложения</a></li>
+                        <li><a href="delivery.html">Доставка</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <main class="main-container">
         <div class="container">
-            <h1 class="page-title">Перфораторы</h1>
+
             <ul class="breadcrumbs">
-                <li><a href='index.html'>Главная</a></li>
-                <li><a>Каталог</a></li>
+                <li><a href='index.html' class="home-icon"><span class="visually-hidden">Главная</span></a></li>
+                <li><a href="#">Каталог</a></li>
                 <li> <a href="tool.html">Инструмент</a></li>
                 <li class="breadcrumbs-current">Перфораторы</li>
             </ul>
+            <h1 class="page-title">Перфораторы</h1>
             <div class="catalog-columns">
                 <section class="filters">
                     <h2>Фильтр</h2>
                     <form class="filter" method="get" action="https://echo.htmlacademy.ru">
                         <fieldset>
                             <legend>Цена:</legend>
-                            <div class="range">
-                                <!-- слайдер, вся линия-->
-                                <div></div>
-                                <!-- яркая линия, выделенный участок от одного до другого ползунка (абсолютное позизионирование от базовой линии)-->
-                                <span></span>
-                                <!-- 1ый ползунок (абсолютное позизионирование от базовой линии -->
-                                <span></span>
-                                <!-- 2ый ползунок (абсолютное позизионирование от базовой линии -->
+                            <div class="range-filter">
+                                <div class="range-controls">
+                                    <div class="scale">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="toggle toggle-min"></div>
+                                    <div class="toggle toggle-max"></div>
+                                </div>
+                                <div class="price-controls">
+                                    <label class="visually-hidden" for="range-min">Цена от</label>
+                                    <input type="text" name="price-min" pattern="[0-9]{5}" placeholder="0" id="range-min" class="price-placeholder">
+                                    <span class="line"></span>
+                                    <label class="visually-hidden" for="range-max">Цена до</label>
+                                    <input type="text" name="price-max" pattern="[0-9]{5}" placeholder="30000" id="range-max" class="price-placeholder">
+                                </div>
                             </div>
-                            <label class="visually-hidden" for="range-min">Цена от</label>
-                            <input type="text" name="price-min" pattern="[0-9]{5}" placeholder="0" id="range-min" class="price-placeholder">
-                            <span>-</span>
-                            <label class="visually-hidden" for="range-max">Цена до</label>
-                            <input type="text" name="price-max" pattern="[0-9]{5}" placeholder="30000" id="range-max" class="price-placeholder">
                         </fieldset>
 
-                        <fieldset>
+                        <fieldset >
                             <legend>Производители:</legend>
-                            <ul>
+                            <ul class="filter-brand">
                                 <li class="filter-option">
                                     <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="boch" id="filter-boch" checked>
                                     <label for="filter-boch">Bosch</label>
@@ -117,7 +120,7 @@
 
                         <fieldset>
                             <legend>Питание:</legend>
-                            <ul>
+                            <ul class="sort-power">
                                 <li class="filter-option">
                                     <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-power" value="battery" id="filter-battery" checked>
                                     <label for="filter-battery">Аккумуляторные</label>
@@ -133,14 +136,14 @@
                     </form>
                 </section>
                 <div class="catalog-wrap">
-                    <section class="sort">
+                    <section class="catalog-sort">
                         <h2>Сортировка</h2>
-                        <ul>
+                        <ul class="sort">
                             <li class="sort-current"><a href="#">По цене</a></li>
-                            <li><a href="#">По типу</a></li>
-                            <li><a href="#">По функционалу</a></li>
-                            <li><a href="#"><span class="visually-hidden">Сортировка по возростанию</span></a></li>
-                            <li><a href="#"><span class="visually-hidden">Сортировка по убыванию</span></a></li>
+                            <li class="sort-type"><a href="#">По типу</a></li>
+                            <li class="sort-function"><a href="#">По функционалу</a></li>
+                            <li><a href="#" class="arrow arrow-up arrow-current"><span class="visually-hidden">Сортировка по возростанию</span></a></li>
+                            <li><a href="#" class="arrow arrow-down"><span class="visually-hidden">Сортировка по убыванию</span></a></li>
                         </ul>
                     </section>
                     <section class="catalog">
