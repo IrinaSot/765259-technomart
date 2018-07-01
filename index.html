@@ -335,22 +335,23 @@
     <section class=modal-feedback>
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-
-            <div class="feedback-login">
+            <div class="feedback-wrap-white">
+                <div class="feedback-login">
+                    <p class="feedback-item">
+                        <label for="user-name">Ваше имя:</label>
+                        <input type="text" id="user-name" name="name" placeholder="Имя Фамилия" class="style-placeholder">
+                    </p>
+                    <p class="feedback-item">
+                        <label for="user-email">Ваш e-mail:</label>
+                        <input type="email" id="user-email" name="email" placeholder="email@example.com" class="style-placeholder">
+                    </p>
+                </div>
                 <p class="feedback-item">
-                    <label for="user-name">Ваше имя:</label>
-                    <input type="text" id="user-name" name="name" placeholder="Имя Фамилия" class="style-placeholder">
-                </p>
-                <p class="feedback-item">
-                    <label for="user-email">Ваш e-mail:</label>
-                    <input type="email" id="user-email" name="email" placeholder="email@example.com" class="style-placeholder">
+                    <label for="user-text">Текст письма:</label>
+                    <textarea id="user-text" name="text" placeholder="В свободной форме" rows="5" class="style-placeholder"></textarea>
                 </p>
             </div>
-            <p class="feedback-item">
-                <label for="user-text">Текст письма:</label>
-                <textarea id="user-text" name="text" placeholder="В свободной форме" rows="5" class="style-placeholder"></textarea>
-            </p>
-            <div class "button-wrap">
+            <div class="feedback-wrap-grey">
                 <button class="feedback-btn button btn-red" type="submit">Отправить</button>
             </div>
         </form>
@@ -373,7 +374,9 @@
         </div>
         <button class="modal-close" type="button">Закрыть</button>
     </div>
-
+    <script src="js/popap.js"> 
+    
+    </script>
 </body>
 
 </html>
