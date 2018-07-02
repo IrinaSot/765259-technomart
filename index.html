@@ -238,22 +238,31 @@
                 <h2>Сервисы</h2>
                 <p>Хороший интернет-магазин отличается от плохого не только ценами!<br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
                 <div class="service-wrap">
-                    <ul class="service-list">
+                  <div class="service-list">
+                  <input  type="radio" id="service-1" name="service" checked class="visually-hidden">
+                  <label for="service-1">Доставка</label>
+                  <input  type="radio" id="service-2" name="service" class="visually-hidden">
+                  <label for="service-2">Гарантия</label>
+                  <input  type="radio" id="service-3" name="service" class="visually-hidden">
+                  <label for="service-3">Кредит</label>
+</div>
+
+                  <!-- <ul class="service-list">
                         <li class="service-item service-item-current"><a href="#">Доставка</a></li>
                         <li class="service-item"><a href="#">Гарантия</a></li>
                         <li class="service-item"><a href="#">Кредит</a></li>
-                    </ul>
+                    </ul>-->
                     <ul class="service-slider">
-                        <li class="service-slider-item service-slider-delivery">
+                        <li id="service-slide1" class="service-slider-item service-slider-delivery" >
 
                             <strong>Доставка</strong>
                             <p>Мы с удовольствием доставим ваш товар прямо <br>к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
                         </li>
-                        <li class="service-slider-item service-slider-guarantee">
+                        <li id="service-slide2" class="service-slider-item service-slider-guarantee" >
                             <strong>Гарантия</strong>
                             <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием,<br> вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. <br> Дом уж восстановите как-нибудь сами.</p>
                         </li>
-                        <li class="service-slider-item service-slider-credit">
+                        <li id="service-slide3" class="service-slider-item service-slider-credit" >
                             <strong>Кредит</strong>
                             <p>Залезть в долговую яму стало проще! <br> Кредитные консультанты придут вам на помощь.</p>
                             <a class="service-btn button btn-red" href="credit.html">Отправить заявку</a>
@@ -374,8 +383,8 @@
         </div>
         <button class="modal-close" type="button">Закрыть</button>
     </div>
-    <script src="js/popap.js"> 
-    
+    <script src="js/popap.js">
+
     </script>
 </body>
 

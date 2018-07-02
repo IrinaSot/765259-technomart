@@ -388,6 +388,7 @@ input[type="radio"].visually-hidden {
     margin: 0;
     margin-left: auto;
     padding: 0;
+    background-color: #ffffff;
 }
 
 .user-navigation a {
@@ -395,7 +396,7 @@ input[type="radio"].visually-hidden {
     font-size: 21px;
     line-height: 21px;
     color: #000000;
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
 }
 
 .user-navigation a:hover {
@@ -692,7 +693,16 @@ input[type="radio"].visually-hidden {
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+.new-item{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 59px;
 
+  overflow: hidden;
+  z-index: 20;
+}
 .menu-item-materials .flag {
     position: absolute;
     top: 0;
@@ -701,6 +711,8 @@ input[type="radio"].visually-hidden {
     height: 59px;
     text-indent: -1000px;
     overflow: hidden;
+
+    background: url("../img/new-flag.png") no-repeat 0 0;
     z-index: 20;
 }
 
@@ -1107,22 +1119,17 @@ popular-price .catalog-item:nth-child(4n) {
 }
 
 .service-list {
+
     margin: 0;
     padding: 0;
     margin-right: 80px;
     margin-top: 1px;
-}
-
-.service-item {
-    width: 240px;
-
 
 }
 
-.service-item li {}
-
-.service-item a {
-    display: block;
+.service-list label{
+  display: block;
+    width: 218px;
     padding-left: 22px;
     padding-top: 15px;
     padding-bottom: 16px;
@@ -1134,20 +1141,44 @@ popular-price .catalog-item:nth-child(4n) {
     background-color: #32425c;
     box-shadow: inset 0 -1px 0 0 #405069;
 }
+.service-item {
+    width: 240px;
+}
 
-.service-item a:hover {
+
+#service-1:checked ~ #service-slide1,
+#service-2:checked ~  #service-slide2,
+#service-3:checked ~  #service-slide3 {
+    display: block;
+}
+
+
+
+
+/*.service-item a {
+    display: block;
+    padding-left: 22px;
+    padding-top: 15px;
+    padding-bottom: 16px;
+
+    font-size: 21px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #32425c;
+    box-shadow: inset 0 -1px 0 0 #405069;
+}*/
+
+.service-list label:hover {
     background-color: #293449;
 }
 
-.service-item a:active {
+.service-list label:active {
     color: #32425c;
     background-color: #ffffff;
 }
 
-.service-item-current a,
-.service-item-current a:hover,
-.service-item-current a:focus,
-.service-item-current a:active {
+.service-list input:checked+label {
     color: #32425c;
     background-color: #ffffff;
 }
@@ -1368,13 +1399,14 @@ popular-price .catalog-item:nth-child(4n) {
 
 .inner-page .user-navigation {
     width: 299px;
+    margin-bottom: 7px;
 }
 
 
 .user a {
     position: relative;
     width: 186px;
-    padding: 12px 65px 12px 46px;
+    padding: 12px 10px 12px 46px;
 
     font-size: 21px;
     line-height: 21px;
@@ -1384,7 +1416,9 @@ popular-price .catalog-item:nth-child(4n) {
 .user a:hover {
     color: #000000;
 }
-
+.user a:focus{
+color:rgba(0, 0, 0, 0.3);
+}
 .user a::before {
     content: "";
     position: absolute;
@@ -1404,29 +1438,34 @@ popular-price .catalog-item:nth-child(4n) {
     background-repeat: no-repeat;
     background-position: 0 0;
 }
-
-.user a::after {
-    content: "";
-    position: absolute;
-    top: 13px;
-    right: 8px;
-
+.user a:focus::before {
+    background-image: url(../img/icon-user.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.exit{
+  width:60px;
+  padding-top: 14px;
+  padding-left: 26px;
+}
+.exit a {
+    display: block;
     width: 21px;
     height: 17px;
 
     background-image: url(../img/icon-logout.svg);
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: 0px 0px;
 }
 
-.user a:hover::after {
+.exit a:hover {
     background-image: url(../img/icon-logout-blue.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
 }
 
 .inner-page .user {
-    margin-bottom: 7px;
+  /*  margin-bottom: 7px;*/
 }
 
 .orders a {
@@ -1950,7 +1989,13 @@ a.arrow:active {
     border-right-color: transparent;
     border-left-color: transparent;
 }
-
+.arrow-current::before{
+  border: 12px solid #ee3643;
+  border-right-width: 6px;
+  border-left-width: 6px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
 .arrow-up::before {
     border-top-width: 0;
     margin-right: 19px;
@@ -2329,7 +2374,7 @@ a.arrow:active {
     top: 412px;
     left: 50%;
     margin-left: -230px;
-    
+
     background-color: #ffffff;
     box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75),
     inset 0 7px 0 #ee3643;
@@ -2340,7 +2385,7 @@ a.arrow:active {
     padding-top: 54px;
     padding-left: 81px;
     padding-right: 79px;
-   
+
 }
 
 .feedback-wrap-grey{
@@ -2475,7 +2520,7 @@ a.arrow:active {
     top: 412px;
     left: 50%;
     margin-left: -230px;
-    
+
     background-color: #ffffff;
     box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75),
     inset 0 7px 0 #ee3643;
@@ -2486,7 +2531,7 @@ a.arrow:active {
     padding-top: 73px;
     padding-left: 81px;
     padding-right: 79px;
-   
+
 }
 
 .wrap-grey{
@@ -2499,13 +2544,13 @@ a.arrow:active {
 .modal-basket p{
     position: relative;
     margin: 0;
-    
+
     padding: 0;
     padding-left: 98px;
     padding-bottom: 67px;
     font-size: 30px;
     line-height: 30px;
-    
+
     color: #000000;
 }
 .modal-basket p::before{
@@ -2518,12 +2563,12 @@ a.arrow:active {
 
     background-image: url(../img/form-1.svg);
     background-repeat: no-repeat;
-    background-position: 0x 0; 
+    background-position: 0x 0;
 
 }
 .modal-button{
     display: flex;
-    padding-top: 37px; 
+    padding-top: 37px;
 }
 .modal-button button{
     width: 220px;
