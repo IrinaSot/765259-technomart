@@ -701,13 +701,13 @@ input[type="radio"].visually-hidden {
     right: 0;
     width: 60px;
     height: 59px;
-   
+
     overflow: hidden;
 
     background: url("../img/new-flag.png") no-repeat 0 0;
     z-index: 30;
 }
-    
+
 
 
 .menu-item-materials .flag {
@@ -717,7 +717,7 @@ input[type="radio"].visually-hidden {
     width: 60px;
     height: 59px;
     text-indent: -1000px;
-    overflow: hidden; 
+    overflow: hidden;
     z-index: 20;
 }
 
@@ -2381,11 +2381,7 @@ a.arrow:active {
     font-family: "PT Sans", Arial, sans-serif;
 }
 
-.modal-show {
-  display: block;
-  
-  animation: bounce 0.6s;
-}
+
 
 
 .modal-feedback {
@@ -2394,7 +2390,7 @@ a.arrow:active {
     width: 620px;
     top: calc(50% - 215px);
     left: calc(50% - 160px);
-    
+
 
     background-color: #ffffff;
     box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75),
@@ -2428,8 +2424,9 @@ a.arrow:active {
     font-size: 0;
 
     border: 0;
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     cursor: pointer;
+    z-index: 3;
 }
 
 .modal-close::before,
@@ -2532,18 +2529,21 @@ a.arrow:active {
     margin-top: -223px;
     margin-left: -470px;
     box-shadow: 0 0 16px rgba(47, 42, 43, 0.5);
-    z-index: 40;
+    /*z-index: 40;*/
 }
 
 .modal-map p {
      position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+     top: 0;
+left: 0;
+z-index: 1;
+
     margin: 0;
 }
 .modal-map iframe {
   position: relative;
+  width:940px;
+   height:446px;
   z-index: 2;
 
   border: none;
@@ -2622,4 +2622,50 @@ a.arrow:active {
     margin-left: 20px;
     color: #000000;
     background-color: #ffffff;
+}
+.modal-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+.modal-error {
+  animation: shake 0.6s;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

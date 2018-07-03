@@ -71,7 +71,7 @@
                 <div class="menu-wrap-bottom">
                     <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
                     <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-                    
+
                        <section class="slider">
                         <div class="slider-controls">
                             <label for="product-1">Первый</label>
@@ -371,9 +371,9 @@
     </section>
     <section class="modal-map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1530590303304"  frameborder="0" style="border:0" allowfullscreen></iframe>
         <p>
-            
-            <img width="940" height="446" src="img/map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+          <img width="940" height="446" src="img/map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
         </p>
         <button class="modal-close" type="button">Закрыть</button>
     </section>
@@ -391,6 +391,90 @@
         <button class="modal-close" type="button">Закрыть</button>
     </div>
 
+<script>
+var link = document.querySelector(".contacts-btn");
+var popup = document.querySelector(".modal-feedback");
+var close = popup.querySelector(".modal-close");
+var login = popup.querySelector("[name=name]");
+var form = popup.querySelector("form");
+var email = popup.querySelector("[name=email]");
+var text = popup.querySelector("[name=text]");
+var storage = localStorage.getItem("login");
+var isStorageSupport = true;
+ var storage = "";
+
+ try {
+   storage = localStorage.getItem("login");
+ } catch (err) {
+   isStorageSupport = false;
+ }
+
+link.addEventListener("click", function (evt) {
+evt.preventDefault();
+    popup.classList.add("modal-show");
+      login.focus();
+if (storage){
+  login.value = storage;
+  email.focus();
+} else {
+  login.focus();
+}
+  });
+
+  close.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
+    });
+
+    form.addEventListener("submit", function (evt) {
+      if (!login.value || !email.value || !text.value){
+    evt.preventDefault();
+     popup.classList.remove("modal-error");
+      popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add("modal-error");
+  } else {
+    if (isStorageSupport){
+    localStorage.setItem("login", login.value);
+localStorage.setItem("email", email.value);
+}
+}
+  });
+
+  window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+
+    if (popup.classList.contains("modal-show")) {
+      evt.preventDefault();
+      popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
+    }
+  }
+});
+
+ var mapLink = document.querySelector(".contacts-map");
+
+  var mapPopup = document.querySelector(".modal-map");
+  var mapClose = mapPopup.querySelector(".modal-close");
+  mapLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.add("modal-show");
+  });
+
+  mapClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.remove("modal-show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    evt.preventDefault();
+    if (evt.keyCode === 27) {
+      if (mapPopup.classList.contains("modal-show")) {
+        mapPopup.classList.remove("modal-show");
+      }
+    }
+  });
+</script>
 
 </body>
 
