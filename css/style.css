@@ -912,8 +912,11 @@ input[type="radio"].visually-hidden {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    width: 940px;
+
     font-size: 0;
 }
 
@@ -2106,7 +2109,7 @@ a.arrow:active {
     margin: 0;
     margin-bottom: 32px;
     padding: 0;
-    
+
     list-style: none;
 }
 
@@ -2126,7 +2129,7 @@ a.arrow:active {
         flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    
+
     list-style: none;
 }
 
@@ -2141,13 +2144,13 @@ a.arrow:active {
 .pagination-list a {
     display: block;
     padding: 9px 15px;
-    
+
     font-size: 13px;
     line-height: 18px;
     font-family: "PT Sans", Arial, sans-serif;
     text-transform: uppercase;
     color: #000000;
-    
+
     background-color: #ffffff;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
@@ -2167,7 +2170,7 @@ a.arrow:active {
 
 .pagination-item-current a {
     color: #ffffff;
-    
+
     background-color: #ee3643;
     border: none;
 }
@@ -2176,7 +2179,7 @@ a.arrow:active {
 .pagination-item-current a:focus,
 .pagination-item-current a:active {
     color: #ffffff;
-    
+
     background-color: #ee3643;
     border: none;
 }
@@ -2191,7 +2194,7 @@ a.arrow:active {
     margin: 0;
     margin-bottom: 26px;
     padding: 0;
-    
+
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
@@ -2202,7 +2205,7 @@ a.arrow:active {
 .about-perforator p {
     margin: 0;
     padding: 0;
-    
+
     font-size: 13px;
     line-height: 24px;
     font-family: "PT Sans", Arial, sans-serif;
@@ -2236,13 +2239,13 @@ a.arrow:active {
     width: 220px;
     padding-top: 18px;
     padding-bottom: 20px;
-    
+
     font-size: 30px;
     line-height: 30px;
     color: #ffffff;
     text-align: center;
     text-transform: uppercase;
-    
+
     background-color: #ee3643;
     -webkit-box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
             box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
@@ -2328,11 +2331,11 @@ a.arrow:active {
 .footer-bottom {
     padding-top: 35px;
     padding-bottom: 30px;
-    
+
     font-size: 16px;
     line-height: 28px;
     color: #ffffff;
-    
+
     background-color: #293449;
 }
 
@@ -2347,7 +2350,7 @@ a.arrow:active {
     margin: 0;
     margin-right: 160px;
     padding: 0;
-    
+
     font-size: 16px;
     line-height: 18px;
 }
@@ -2365,7 +2368,7 @@ a.arrow:active {
     margin: 0;
     margin-right: 119px;
     padding: 0;
-    
+
     list-style: none;
     text-align: center;
 }
@@ -2384,7 +2387,7 @@ a.arrow:active {
     height: 42px;
 
     color: #ffffff;
-    
+
     background-color: #212a3a;
     border-radius: 50%;
 }
@@ -2396,7 +2399,7 @@ a.arrow:active {
 
 .footer-contacts {
     margin-right: 51px;
-    
+
     font-size: 16px;
     line-height: 18px;
 }
@@ -2410,7 +2413,7 @@ a.arrow:active {
 .footer-development p {
     margin: 0;
     padding: 0;
-    
+
     font-size: 16px;
     line-height: 18px;
 }
@@ -2420,7 +2423,7 @@ a.arrow:active {
     display: block;
     margin: 0;
     padding: 0;
-    
+
     color: #ffd180;
 }
 
@@ -2562,12 +2565,12 @@ a.arrow:active {
             box-sizing: border-box;
     width: 220px;
     padding: 7px 15px;
-    
+
     font-size: 13px;
     line-height: 18px;
     font-family: "PT Sans", Arial, sans-serif;
     color: #a9a9a9;
-    
+
     border: 2px solid #d7dcde;
     border-radius: 3px;
     outline: 0;
@@ -2819,4 +2822,3 @@ a.arrow:active {
                 transform: translateX(10px);
     }
 }
-

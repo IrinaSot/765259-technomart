@@ -177,6 +177,7 @@
                         <div class="price-past"></div>
                         <div class="price-btn button">12500 Р.</div>
                     </li>
+
                 </ul>
                 <div class="title-btn-wrap">
                     <h2 class="section-title">Популярные производители</h2>
@@ -355,113 +356,9 @@
         <button class="modal-close" type="button">Закрыть</button>
     </div>
 
-    <script>
-        var link = document.querySelector(".contacts-btn");
-        var popup = document.querySelector(".modal-feedback");
-        var close = popup.querySelector(".modal-close");
-        var login = popup.querySelector("[name=name]");
-        var form = popup.querySelector("form");
-        var email = popup.querySelector("[name=email]");
-        var text = popup.querySelector("[name=text]");
-        var storage = localStorage.getItem("login");
-        var isStorageSupport = true;
-        var storage = "";
-
-        try {
-            storage = localStorage.getItem("login");
-        } catch (err) {
-            isStorageSupport = false;
-        }
-
-        link.addEventListener("click", function(evt) {
-            evt.preventDefault();
-            popup.classList.add("modal-show");
-            login.focus();
-            if (storage) {
-                login.value = storage;
-                email.focus();
-            } else {
-                login.focus();
-            }
-        });
-
-        close.addEventListener("click", function(evt) {
-            evt.preventDefault();
-            popup.classList.remove("modal-show");
-            popup.classList.remove("modal-error");
-        });
-
-        form.addEventListener("submit", function(evt) {
-            if (!login.value || !email.value || !text.value) {
-                evt.preventDefault();
-                popup.classList.remove("modal-error");
-                popup.offsetWidth = popup.offsetWidth;
-                popup.classList.add("modal-error");
-            } else {
-                if (isStorageSupport) {
-                    localStorage.setItem("login", login.value);
-                    localStorage.setItem("email", email.value);
-                }
-            }
-        });
-
-        window.addEventListener("keydown", function(evt) {
-            if (evt.keyCode === 27) {
-
-                if (popup.classList.contains("modal-show")) {
-                    evt.preventDefault();
-                    popup.classList.remove("modal-show");
-                    popup.classList.remove("modal-error");
-                }
-            }
-        });
-
-        var mapLink = document.querySelector(".contacts-map");
-
-        var mapPopup = document.querySelector(".modal-map");
-        var mapClose = mapPopup.querySelector(".modal-close");
-
-        mapLink.addEventListener("click", function(evt) {
-            evt.preventDefault();
-            mapPopup.classList.add("modal-show");
-        });
-
-        mapClose.addEventListener("click", function(evt) {
-            evt.preventDefault();
-            mapPopup.classList.remove("modal-show");
-        });
-
-        window.addEventListener("keydown", function(evt) {
-            evt.preventDefault();
-            if (evt.keyCode === 27) {
-                if (mapPopup.classList.contains("modal-show")) {
-                    mapPopup.classList.remove("modal-show");
-                }
-            }
-        });
-        var basketLink = document.querySelector(".catalog-btn-basket");
-        var basketPopup = document.querySelector(".modal-basket");
-        var basketClose = basketPopup.querySelector(".modal-close");
-
-        basketLink.addEventListener("click", function(evt) {
-            evt.preventDefault();
-            basketPopup.classList.add("modal-show");
-        });
-        basketClose.addEventListener("click", function(evt) {
-            evt.preventDefault();
-            basketPopup.classList.remove("modal-show");
-        });
-
-        window.addEventListener("keydown", function(evt) {
-            evt.preventDefault();
-            if (evt.keyCode === 27) {
-                if (basketPopup.classList.contains("modal-show")) {
-                    basketPopup.classList.remove("modal-show");
-                }
-            }
-        });
-    </script>
-
+    <script src="js/popup.js"></script>
+    <script src="js/basket.js"></script>
+    <script src="js/map.js"></script>
 </body>
 
 </html>
