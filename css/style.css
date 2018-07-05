@@ -384,7 +384,6 @@ input[type="radio"].visually-hidden {
     margin: 0;
     margin-left: auto;
     padding: 0;
-    /*  background-color: #ffffff;*/
 }
 
 .user-navigation a {
@@ -650,6 +649,7 @@ input[type="radio"].visually-hidden {
 }
 
 .menu-item h3 {
+    width: 140px;
     margin: 0;
     margin-bottom: 13px;
     padding: 0;
@@ -2237,6 +2237,30 @@ a.arrow:active {
     padding: 0;
     list-style: none;
     text-align: center;
+}
+
+.social-btn-vk {
+    width: 26px;
+    height: 15px;
+    background-image: url(../img/vk-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-btn-fb {
+    width: 12px;
+    height: 22px;
+    background-image: url(../img/fb-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-btn-in {
+    width: 21px;
+    height: 21px;
+    background-image: url(../img/insta-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .social-btn {
