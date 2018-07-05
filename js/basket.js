@@ -15,8 +15,9 @@ basketClose.addEventListener("click", function (evt) {
 });
 
 window.addEventListener("keydown", function (evt) {
-    evt.preventDefault();
+
     if (evt.keyCode === 27) {
+        evt.preventDefault();
         if (basketPopup.classList.contains("modal-show")) {
             basketPopup.classList.remove("modal-show");
         }

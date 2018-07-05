@@ -1,10 +1,10 @@
 var link = document.querySelector(".contacts-btn");
 var popup = document.querySelector(".modal-feedback");
 var close = popup.querySelector(".modal-close");
-var login = popup.querySelector("[name=name]");
+var login = popup.querySelector("[name=user-name]");
 var form = popup.querySelector("form");
-var email = popup.querySelector("[name=email]");
-var text = popup.querySelector("[name=text]");
+var email = popup.querySelector("[name = email]");
+var text = popup.querySelector("[name = text]");
 var isStorageSupport = true;
 var storage = "";
 
@@ -18,7 +18,7 @@ link.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
 
-    if (storage) {
+  if (storage) {
         login.value = storage;
         email.focus();
     } else {
@@ -54,4 +54,3 @@ window.addEventListener("keydown", function (evt) {
         }
     }
 });
-
