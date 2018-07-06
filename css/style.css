@@ -1915,7 +1915,11 @@ a.arrow:active {
     content: "";
     display: block;
     border-bottom: none;
-    border: 12px solid #c5c5c5;
+    border-top-width: 12px;
+    border-bottom-width: 12px;
+    border-style: solid;
+    border-bottom-color: #c5c5c5;
+    border-top-color: #c5c5c5;
     border-right-width: 6px;
     border-left-width: 6px;
     border-right-color: transparent;
@@ -1923,7 +1927,10 @@ a.arrow:active {
 }
 
 .arrow-current::before {
-    border: 12px solid #ee3643;
+    border-bottom-color: #ee3643;
+    border-style: solid;
+    border-bottom-width: 12px;
+    border-top-color: #ee3643;
     border-right-width: 6px;
     border-left-width: 6px;
     border-right-color: transparent;
