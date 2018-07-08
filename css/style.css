@@ -901,7 +901,7 @@ input[type="radio"].visually-hidden {
     left: 0;
     width: 218px;
     height: 88px;
-    padding: 40px 0;
+    padding: 43px 0 40px 0;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -909,17 +909,36 @@ input[type="radio"].visually-hidden {
 .catalog-btn-bookmarks {
     display: block;
     margin: 0 auto;
-    margin-bottom: 7px;
+    margin-bottom: 8px;
     font-size: 14px;
     line-height: 18px;
     background-color: #63a63e;
 }
 
 .catalog-btn-basket {
+    position: relative;
     padding: 10px 0;
     width: 135px;
-    -webkit-box-shadow: 0 3px 0 0 rgba(54, 115, 21, 0.9);
-            box-shadow: 0 3px 0 0 rgba(54, 115, 21, 0.9)
+    -webkit-box-shadow: inset 0 -3px 0 0 rgba(54, 115, 21, 0.9);
+            box-shadow: inset 0 -3px 0 0 rgba(54, 115, 21, 0.9);
+}
+
+.catalog-btn-basket::before{
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 13px;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/cart-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3; 
+}
+
+.catalog-btn-basket:hover::before,
+.catalog-btn-basket:focus::before{
+  opacity: 1;  
 }
 
 .catalog-item:hover .catalog-btn {
@@ -938,6 +957,7 @@ input[type="radio"].visually-hidden {
 .catalog-btn-basket:focus {
     color: #ffffff;
     background-color: #518534;
+    box-shadow: none;
 }
 
 .catalog-btn-bookmarks {
